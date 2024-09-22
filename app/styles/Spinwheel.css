@@ -1,0 +1,108 @@
+.App {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .wheel-container {
+    margin: 0 auto;
+    width: 400px; /* Ukuran lebih besar */
+    height: 400px; /* Ukuran lebih besar */
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
+  }
+  
+  .wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 4s ease-out;
+  }
+  
+  .segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform-origin: 100% 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    border: 1px solid #fff;
+  }
+  
+  /* Warna segmen */
+  .segment:nth-child(1) {
+    background-color: #ff9999;
+    transform: rotate(0deg);
+  }
+  
+  .segment:nth-child(2) {
+    background-color: #ffcc99;
+    transform: rotate(45deg);
+  }
+  
+  .segment:nth-child(3) {
+    background-color: #ffff99;
+    transform: rotate(90deg);
+  }
+  
+  .segment:nth-child(4) {
+    background-color: #ccff99;
+    transform: rotate(135deg);
+  }
+  
+  .segment:nth-child(5) {
+    background-color: #99ffcc;
+    transform: rotate(180deg);
+  }
+  
+  .segment:nth-child(6) {
+    background-color: #99ccff;
+    transform: rotate(225deg);
+  }
+  
+  .segment:nth-child(7) {
+    background-color: #cc99ff;
+    transform: rotate(270deg);
+  }
+  
+  .segment:nth-child(8) {
+    background-color: #ff99ff;
+    transform: rotate(315deg);
+  }
+  
+  /* Teks di dalam segmen, lebih besar dan lebih jelas */
+  .segment span {
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    transform: translate(-50%, -50%) rotate(-22.5deg); /* Rotasi teks agar horizontal */
+    text-align: center;
+    font-size: 16px; /* Ukuran font lebih besar */
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan untuk keterbacaan lebih baik */
+  }
+  
+  
+  
+  button {
+    margin-top: 24px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background: #fff;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+
+  .title-spin {
+    font-size: 24px;
+  }

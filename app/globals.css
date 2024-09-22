@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: linear-gradient(90deg, rgba(213,255,234,1) 0%, rgba(255,215,215,1) 50%, rgba(255,255,210,1) 100%);
+  /* --foreground: #171717; */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: linear-gradient(90deg, rgba(213,255,234,1) 0%, rgba(255,215,215,1) 50%, rgba(255,255,210,1) 100%);
+    /* --foreground: #ededed; */
   }
 }
 
@@ -24,4 +24,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.spin-table {
+  color: red;
 }
