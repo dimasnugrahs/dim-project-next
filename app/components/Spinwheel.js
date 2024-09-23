@@ -192,19 +192,24 @@ const Spinwheel = () => {
               </div>
               <div className="p-4 md:p-5 space-y-2">
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  Hello!{" "}
-                  <span className="text-gray-900 dark:text-white">{name}</span>,
-                  grats! you`ve won{" "}
+                  Hello!&nbsp;
                   <span className="text-gray-900 dark:text-white">
-                    Rp{selected}
+                    <strong>{name}</strong>
+                  </span>
+                  , grats! you`ve won{" "}
+                  <span className="text-gray-900 dark:text-white">
+                    <strong>Rp{selected}</strong>
                   </span>{" "}
                   from this event. Send me the video you`re recording right now.
                   I hope you and around can fully enjoy and blessed the joy
                   of&nbsp;
                   <span className="text-gray-900 dark:text-white">
-                    Galungan and Kuningan
+                    <strong>Galungan and Kuningan</strong>
                   </span>{" "}
                   celebrations.
+                </p>
+                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  &nbsp;
                 </p>
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                   Dont worries bout to this event, this website was created
