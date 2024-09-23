@@ -67,12 +67,12 @@ export default function Table({ spins }) {
             </tr>
           </tbody>
         ))}
+        {spins.length === 0 && (
+          <div className="flex h-[500px] items-center justify-center text-center text-red-400 text-xl">
+            No Data
+          </div>
+        )}
       </table>
-      {spins.length === 0 && (
-        <div className="flex h-[500px] items-center justify-center text-center">
-          No Data
-        </div>
-      )}
     </div>
   );
 }

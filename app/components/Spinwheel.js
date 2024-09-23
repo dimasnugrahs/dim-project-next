@@ -108,24 +108,40 @@ const Spinwheel = () => {
     <div>
       {isNameModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-5 rounded shadow-lg">
-            <h2>Masukkan Nama Anda</h2>
-            <form onSubmit={handleNameSubmit}>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="border p-2 w-full"
-                placeholder="Masukkan Nama"
-                required
-              />
-              <button
-                type="submit"
-                className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
-              >
-                Lanjutkan
-              </button>
-            </form>
+          <div className="relative p-4 w-full max-w-2xl max-h-full">
+            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Get your Luckiest day ever!
+                </h3>
+              </div>
+              <div className="p-4 md:p-5 space-y-2">
+                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  Hello! Dont think twice to explore more this website, enjoy
+                  all the features and grab your luck. Letsgooo~
+                </p>
+              </div>
+              <div className="p-4 md:p-5 space-y-4 ">
+                <form onSubmit={handleNameSubmit}>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                    placeholder="Ready to spin? Drop your name first here!"
+                    required
+                  />
+                  <div className="flex justify-end mb-2">
+                    <button
+                      type="submit"
+                      className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-12 py-2.5 text-center border-none"
+                    >
+                      Click Here
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -133,7 +149,7 @@ const Spinwheel = () => {
       {!isNameModalOpen && (
         <div className="App">
           <div>
-            <h1 className="title-spin">Spin Gaskeun, {name}</h1>
+            <h1 className="title-spin">Hello {name}, Get your spin below!</h1>
           </div>
           <div className="indicator">&#9660;</div>
           <div className="wheel-container">
@@ -160,24 +176,61 @@ const Spinwheel = () => {
               : "Reset & Spin Lagi"}
           </button>
           {selected && !spinning && (
-            <div className="result">Hasil: {selected}</div>
+            <div className="result">Hasil: Rp{selected}</div>
           )}
         </div>
       )}
 
       {isResultModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-5 rounded shadow-lg">
-            <h2>Selamat, {name}!</h2>
-            <p>Anda mendapatkan: {selected}</p>
-            <button
-              onClick={() => setIsResultModalOpen(false)}
-              className="mt-4 bg-red-500 text-white py-2 px-4 rounded"
-            >
-              Tutup
-            </button>
+          <div className="relative p-4 w-full max-w-2xl max-h-full">
+            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Yeayyy! You`ve hit the jackpot!
+                </h3>
+              </div>
+              <div className="p-4 md:p-5 space-y-2">
+                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  Hello! <span className="text-white">{name}</span>, grats!
+                  you`ve won <span className="text-white">Rp{selected}</span>{" "}
+                  from this event. Send me the video you`re recording right now.
+                  I hope you and around can fully enjoy and blessed the joy
+                  of&nbsp;
+                  <span className="text-white">Galungan and Kuningan</span>{" "}
+                  celebrations.
+                </p>
+                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  Dont worries bout to this event, this website was created
+                  during the break day and very enjoy. Thanks a lot for all your
+                  help while working on this project! Yoshhh~
+                </p>
+              </div>
+              <div className="p-4 md:p-5 space-y-4 flex justify-end">
+                <button
+                  type="submit"
+                  onClick={() => setIsResultModalOpen(false)}
+                  className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-12 py-2.5 text-center border-none"
+                >
+                  Close Now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+
+        // <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        //   <div className="bg-white p-5 rounded shadow-lg">
+        //     <h2>Selamat, {name}!</h2>
+        //     <p>Anda mendapatkan: {selected}</p>
+        //     <button
+        //       onClick={() => setIsResultModalOpen(false)}
+        //       className="mt-4 bg-red-500 text-white py-2 px-4 rounded"
+        //     >
+        //       Tutup
+        //     </button>
+        //   </div>
+        // </div>
       )}
     </div>
   );
